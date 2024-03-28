@@ -1,0 +1,14 @@
+---
+services:
+  gate:
+    container_name: gate
+    image: ghcr.io/minekube/gate:latest
+    restart: unless-stopped
+    ports:
+      - 25565:25565
+    volumes:
+      - ./config.yml:/config.yml
+
+networks:
+  default:
+    name: gate

@@ -1,0 +1,12 @@
+# https://gate.minekube.com/guide/config/
+---
+config:
+  onlineMode: false
+  requireBuiltinCommandPermissions: false
+  forwarding: 
+    mode: velocity
+    velocitySecret: velocity
+  servers:
+    server-a: server-a:25565
+  try:
+    - server-a

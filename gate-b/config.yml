@@ -1,0 +1,12 @@
+---
+config:
+  onlineMode: false
+  proxyProtocol: true
+  requireBuiltinCommandPermissions: false
+  forwarding: 
+    mode: velocity
+    velocitySecret: velocity
+  servers:
+    server-b: server-b:25565
+  try:
+    - server-b

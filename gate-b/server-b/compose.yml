@@ -1,0 +1,22 @@
+---
+services:
+  server-b:
+    container_name: server-b
+    image: docker.io/itzg/minecraft-server:latest
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    environment:
+      EULA: "true"
+      TYPE: PAPER
+      VERSION: "1.20.4"
+      ONLINE_MODE: "false"
+      INIT_MEMORY: 5G
+      MAX_MEMORY: 10G
+    volumes:
+      - ./data:/data
+
+networks:
+  default:
+    name: gate-b
+    external: true

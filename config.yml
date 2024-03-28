@@ -1,0 +1,11 @@
+---
+config:
+  lite:
+    enabled: true
+    routes:
+      - host: gate-a.localhost
+        backend: gate-a:25565
+
+      - host: gate-b.localhost
+        backend: gate-b:25565
+        proxyProtocol: true
